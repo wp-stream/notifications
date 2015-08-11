@@ -1,5 +1,5 @@
 <?php
-namespace TenUp\Stream_Notifications\Core;
+namespace Stream\Stream_Notifications\Core;
 
 /**
  * Default setup routine

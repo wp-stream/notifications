@@ -1,6 +1,6 @@
 <?php
 
-namespace TenUp\Stream_Notifications;
+namespace Stream\Stream_Notifications;
 
 use PHPUnit_Framework_TestResult;
 use Text_Template;

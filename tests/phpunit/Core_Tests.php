@@ -1,5 +1,5 @@
 <?php
-namespace TenUp\Stream_Notifications\Core;
+namespace Stream\Stream_Notifications\Core;
 
 /**
  * This is a very basic test case to get things started. You should probably rename this and make
@@ -13,7 +13,7 @@ namespace TenUp\Stream_Notifications\Core;
  *   - https://github.com/10up/wp_mock
  */
 
-use TenUp\Stream_Notifications as Base;
+use Stream\Stream_Notifications as Base;
 
 class Core_Tests extends Base\TestCase {
 
@@ -26,8 +26,8 @@ class Core_Tests extends Base\TestCase {
 	 */
 	public function test_setup() {
 		// Setup
-		\WP_Mock::expectActionAdded( 'init', 'TenUp\Stream_Notifications\Core\i18n' );
-		\WP_Mock::expectActionAdded( 'init', 'TenUp\Stream_Notifications\Core\init' );
+		\WP_Mock::expectActionAdded( 'init', 'Stream\Stream_Notifications\Core\i18n' );
+		\WP_Mock::expectActionAdded( 'init', 'Stream\Stream_Notifications\Core\init' );
 		\WP_Mock::expectAction( 'stream_notifications_loaded' );
 
 		// Act

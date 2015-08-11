@@ -4,7 +4,7 @@
  * Plugin URI:  http://wordpress.org/plugins
  * Description: Stream Notifications Plugin
  * Version:     0.1.0
- * Author:      XWP
+ * Author:      Stream
  * Author URI:  n/a
  * License:     GPLv2+
  * Text Domain: stream_notifications
@@ -43,11 +43,15 @@ define( 'STREAM_NOTIFICATIONS_INC',     STREAM_NOTIFICATIONS_PATH . 'includes/' 
 
 // Include files
 require_once STREAM_NOTIFICATIONS_INC . 'functions/core.php';
+require_once STREAM_NOTIFICATIONS_INC . 'post-types/notifications.php';
+require_once STREAM_NOTIFICATIONS_INC . 'admin/notifications_admin.php';
 
 
 // Activation/Deactivation
-register_activation_hook( __FILE__, '\TenUp\Stream_Notifications\Core\activate' );
-register_deactivation_hook( __FILE__, '\TenUp\Stream_Notifications\Core\deactivate' );
+register_activation_hook( __FILE__, '\Stream\Stream_Notifications\Core\activate' );
+register_deactivation_hook( __FILE__, '\Stream\Stream_Notifications\Core\deactivate' );
 
 // Bootstrap
-TenUp\Stream_Notifications\Core\setup();
+Stream\Stream_Notifications\Core\setup();
+Stream\Stream_Notifications\Notifications\setup();
+Stream\Stream_Notifications\Notifications_Admin\setup();
